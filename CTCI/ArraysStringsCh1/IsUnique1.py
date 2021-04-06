@@ -1,4 +1,6 @@
 from collections import Counter
+#determines if all characters in a string are unique
+
 
 def isUnique(string): 
     strSet = set(string)
