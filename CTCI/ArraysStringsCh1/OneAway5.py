@@ -3,16 +3,7 @@ import unittest
 from collections import Counter
 
 def oneAway(string1, string2): 
-    str1C = Counter(string1) 
-    str2C = Counter(string2) 
-
-    s1Set = set(str1C.elements())
-    s2Set = set(str2C.elements())
-    print(s1Set)
-    print(s2Set)
-
-    #get unicode of each letter and multiple * value
-    #compare their sums, should be a difference of 1 
+    pass
 
 
 class TestOneAway(unittest.TestCase): 

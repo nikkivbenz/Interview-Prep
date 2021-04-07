@@ -1,12 +1,11 @@
 import unittest
+#given a string, convert whitespace to % 
+
 
 def urlify(string, lenString):
     strSplit = string.split()
+    #splits by whitespace then joins with % char 
     return "%".join(strSplit)
-
-def testing(): 
-    print(urlify("howdy  there", 14))
-    print(urlify("no nose goes", 1))
 
 class URLifyTestCase(unittest.TestCase):
     test_cases = [("idk how  this works", "idk%how%this%works"), 
