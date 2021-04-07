@@ -32,7 +32,7 @@ def rotateMatrixForward(matrix):
 
 def rotateMatrixBackward(a): 
     a = [[1, 2, 3],  [4, 5, 6], [7, 8, 9]]
-    n = -(len(a) - 1)
+    n = len(a) - 1
         
     newArr = []
 
@@ -40,18 +40,19 @@ def rotateMatrixBackward(a):
     listNums = strA.split(",")
 
     temp = listNums.copy()
-    lenA = len(a) - 1
+    lenAMinN = len(a) - (n + 1)
+    get = len(a) - 1
     
     count = 0
     while len(temp) > 0 : 
-        print(lenA)
-        for num in range(lenA, 0, n): 
-            print(num)
-
+        x = listNums[get]
+        temp.remove(x)
+        newArr.append(x)
+        
+        get -= n 
         count += 1
         if count == 10: 
             break
-        n -= 1
         
 
 rotateMatrixBackward([1,2,3])
