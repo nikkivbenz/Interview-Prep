@@ -16,8 +16,22 @@ def deleteDuplicates(linkedList):
         head = head.next_node
     return newLinkedList
 
-       
-    
+def deleteDuplicatesAlternative(linkedList):
+    prev = None
+    head = linkedList.head
+    allData = [] 
+
+    while head != None: 
+        if head.data in allData: 
+            prev.next_node = head.next_node
+            head = prev.next_node
+
+        else: 
+            allData.append(head.data)
+            prev = head
+            head = head.next_node
+            
+    return linkedList
 
 
 
@@ -31,9 +45,9 @@ class TestDeleteDuplicates(unittest.TestCase):
     def test_delete_duplicates(self): 
         for linkedList, expected in self.test_cases: 
             result = deleteDuplicates(linkedList)
+            result2 = deleteDuplicatesAlternative(linkedList)
             self.assertEqual(result.toString(), expected.toString(), f"error caused at {linkedList.toString()} got {result.toString()} instead of {expected.toString()}")
+            self.assertEqual(result2.toString(), expected.toString(), f"ALTERNATIVE error caused at {linkedList.toString()} got {result.toString()} instead of {expected.toString()}")
 
 
 unittest.main()
-# l1 = LinkedList(Node(1, Node(2, Node(3, Node(4, Node(1, Node(2)))))))
-# print(deleteDuplicates(l1).toString())
