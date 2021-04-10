@@ -36,5 +36,10 @@ class LinkedList(object):
         self.head = node
         node.next_node = current
 
+    def createLinkedList(self, arrValues): 
+        current = self.head
+        for x in arrValues: 
+            head.next_node = Node(x)
+        return self.head
 
 

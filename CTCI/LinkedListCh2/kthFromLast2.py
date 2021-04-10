@@ -17,5 +17,4 @@ class TestKthFromlast(unittest.TestCase):
         for linkList, k, exptected in self.test_cases: 
             result = kthFromlast(linkList, k)
             self.assertEqual(result, exptected, f"Error at {linkList} got {result} instead of {exptected}")
-kthFromlast(LinkedList(Node(1, Node(2, Node(3, Node(4))))), 2)
 unittest.main()
