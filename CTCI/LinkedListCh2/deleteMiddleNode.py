@@ -16,8 +16,9 @@ x  = deleteMiddle(LinkedList(Node(1, Node(2, Node(3, Node(4, Node(5, Node(6, Nod
 y = deleteMiddle(LinkedList(Node(1, Node(2, Node(3)))))
 
 class TestDeleteMiddle(unittest.TestCase): 
-    test_cases = [((LinkedList(1).createLinkedList[2,3,4,5,6, 7]), 4)
-                (LinkedList(1).createLinkedList[2,3], 2)]
+    #TODO having errors creating the lists
+    # test_cases = [((LinkedList(1).createLinkedList[2,3,4,5,6, 7]), 4)
+    #             (LinkedList(1).createLinkedList[2,3], 2)]
 
     def test_delete_middle(self): 
         for testList, expected in self.test_cases: 
